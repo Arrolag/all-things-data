@@ -10,6 +10,11 @@ website:
         href: index.qmd
       - text: "Blog"
         href: blog.qmd
+  page-footer:
+    left: |
+      © 2025 Ruth Ogal.
+    right: |
+      Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
 
 
 format:

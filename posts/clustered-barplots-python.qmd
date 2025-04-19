@@ -1,6 +1,5 @@
 ---
 title: "Creating clustered bar graphs with Python"
-description: "A tutorial on creating clustered bar graphs using Python."
 date: 2025-04-18
 categories: [Data Visualization, Python]
 tags: [barplots, Python]
@@ -35,6 +34,7 @@ import seaborn as sns
 
 ```{=html}
 <table>
+  <caption>Table 1: Dummy sales data.</caption>
   <thead>
     <tr>
       <th>Store</th>
@@ -90,7 +90,6 @@ import seaborn as sns
     </tr>
   </tbody>
 </table>
-<p style="font-weight: bold; text-indent: 30px;">Table 1: Dummy sales data.</p> 
 ```
 
 

@@ -5,7 +5,6 @@
 <meta name="generator" content="quarto-1.6.40">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="dcterms.date" content="2025-04-18">
-<meta name="description" content="A tutorial on creating clustered bar graphs using base R.">
 <title>Creating clustered bar graphs with R base graphics – ARRO</title>
 <style>
 code{white-space: pre-wrap;}
@@ -149,11 +148,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   </div>
 
-<div>
-  <div class="description">
-    A tutorial on creating clustered bar graphs using base R.
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -177,6 +171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To follow through with the activities in this article, you should have a working knowledge of R.</p>
 </section><section id="the-data" class="level2"><h2 class="anchored" data-anchor-id="the-data">The Data</h2>
 <table class="caption-top table" data-quarto-postprocess="true">
+<caption>Table 1: Dummy sales data.</caption>
 <thead><tr class="header">
 <th data-quarto-table-cell-role="th">Store</th>
 <th data-quarto-table-cell-role="th">Product</th>
@@ -230,7 +225,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p style="font-weight: bold; text-indent: 30px;">Table 1: Dummy sales data.</p> 
 <p>To create the graphs in this article, we use the dataset displayed in Table 1. In this dataset, Store and Product are categorical variables, while Sales is a numerical variable. You can use a clustered bar graph to compare the monthly sales of the three products across the three stores. The bars in this graph will be organized into three groups based on store levels, with each bar representing the sales figure for a specific product.</p>
 </section><section id="how-to-create-the-graph" class="level2"><h2 class="anchored" data-anchor-id="how-to-create-the-graph">How to create the graph</h2>
 <section id="step-1-reorganize-the-dataset" class="level3"><h3 class="anchored" data-anchor-id="step-1-reorganize-the-dataset">Step 1: Reorganize the dataset</h3>
@@ -778,7 +772,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Ruth Ogal.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.</p>
+</div>
+  </div>
+</footer>
 
 
 </body></html>

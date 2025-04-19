@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-description','listing-date','listing-categories','listing-tags',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-date","listing-tags"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -195,21 +195,13 @@ window.Quarto = {
 </header>
 
 
-<p>Welcome to this growing library of ideas.</p>
-<p>Use the search box below to find articles by title, date, or tags.</p>
 
 
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RGF0YSUyMFZpc3VhbGl6YXRpb24lMkNQeXRob24=" data-listing-date-sort="1744923600000" data-listing-file-modified-sort="1745004211479" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1469">
+<div class="quarto-post image-right" data-index="0" data-categories="RGF0YSUyMFZpc3VhbGl6YXRpb24lMkNQeXRob24=" data-listing-date-sort="1744923600000" data-listing-file-modified-sort="1745067819693" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1466">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/clustered-barplots-python.html" class="no-external">Creating clustered bar graphs with Python</a>
@@ -226,7 +218,7 @@ Python
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/clustered-barplots-python.html" class="no-external">A tutorial on creating clustered bar graphs using Python.</a>
+<a href="./posts/clustered-barplots-python.html" class="no-external">A clustered bar graph, also known as a grouped bar chart, is used to plot numerical values for the levels of two categorical variables in a dataset. In these graphs, the…</a>
 </div>
 </div>
 <div class="metadata">
@@ -240,7 +232,7 @@ barplots,Python
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="RGF0YSUyMFZpc3VhbGl6YXRpb24lMkNS" data-listing-date-sort="1744923600000" data-listing-file-modified-sort="1745003344805" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1411">
+<div class="quarto-post image-right" data-index="1" data-categories="RGF0YSUyMFZpc3VhbGl6YXRpb24lMkNS" data-listing-date-sort="1744923600000" data-listing-file-modified-sort="1745067808820" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1408">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/clustered-barplots-r.html" class="no-external">Creating clustered bar graphs with R base graphics</a>
@@ -257,7 +249,7 @@ R
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/clustered-barplots-r.html" class="no-external">A tutorial on creating clustered bar graphs using base R.</a>
+<a href="./posts/clustered-barplots-r.html" class="no-external">A clustered bar graph is useful for comparing values across two categories of data. In this type of graph, we organize the bars in groups based on the levels of the first…</a>
 </div>
 </div>
 <div class="metadata">
@@ -699,6 +691,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Ruth Ogal.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.</p>
+</div>
+  </div>
+</footer>
 
 
 
