@@ -1,0 +1,14 @@
+---
+title: "Blog"
+listing: 
+  contents: posts
+  type: default
+  sort: "date desc"
+  filter-ui: [title, date, tags]
+  fields: [title, description, date, categories, tags]
+  categories: true
+---
+
+Welcome to this growing library of ideas.
+
+Use the search box below to find articles by title, date, or tags.

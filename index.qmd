@@ -1,0 +1,36 @@
+---
+title: "Hi, I'm Ruth."
+format:
+  html:
+    toc: false
+---
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+Welcome to my digital workspace!
+
+I'm a **data analyst** passionate about turning messy data into insightful stories. My work blends **statistics**, **machine learning**, and **visual storytelling** to address real-world problems.
+
+I come from a strong background in **mathematics and education**, with over a decade spent making complex concepts make sense. These days, I channel that clarity into crafting analytical solutions and writing articles that simplify mathematical topics.
+
+---
+
+## What You'll Find Here 
+
+This site is a curated collection of my projects, experiments, and thoughts on data analytics, along with a discussion of some elementary math ideas from my teaching days. Here are some of the things I share:
+
+- **Data analysis tutorials**  
+- **Machine learning projects**   
+- **Data visualizations**  
+
+Head over to the [Blog](./blog.qmd) page to dive in.
+
+---
+
+## Let’s Connect 
+
+If you're looking to collaborate or share ideas, you can find me here:
+
+- 💼 [LinkedIn](https://linkedin.com/in/akechruthogal)
+- 💻 [GitHub](https://github.com/arrolag)

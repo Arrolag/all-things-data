@@ -1,0 +1,82 @@
+/* css styles */
+body {
+  font-family: 'Roboto', 'Lora', serif;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: #2c2c2c;
+  background-color: #ffffff;
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem, 2rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-top: 1.5em;
+  line-height: 1.4;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.5rem; }
+
+a {
+  color: #2a7f62;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar customization */
+.navbar {
+  background-color: #f8f9fa !important;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: #1a1a1a !important;
+}
+
+.nav-link {
+  color: #444 !important;
+}
+
+.nav-link:hover {
+  color: #2a7f62 !important;
+}
+
+/* List layout for articles */
+.quarto-listing-default .listing-description {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.quarto-listing-default .listing-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.quarto-listing-default .listing-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Optional filter UI tweaks */
+.quarto-category {
+  border-radius: 8px;
+  padding: 0.2rem 0.6rem;
+  margin-right: 0.3rem;
+  font-size: 0.85rem;
+  background-color: #e6f0eb;
+  color: #2a7f62;
+}
+
+/* Table of contents (TOC) styling */
+.toc {
+  font-size: 0.9rem;
+  color: #555;
+}
