@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/articles.html",
+    "items": [
+      "/posts/clustered-barplots-python.html",
+      "/posts/clustered-barplots-r.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/clustered-barplots-python.html",
+      "/posts/clustered-barplots-r.html"
+    ]
+  }
+]

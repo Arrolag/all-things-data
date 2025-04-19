@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "ARRO"
+  navbar:
+    left:
+      - text: "About"
+        href: index.qmd
+      - text: "Blog"
+        href: blog.qmd
+
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    code-link: true
+    link-external-newwindow: true

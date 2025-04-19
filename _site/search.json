@@ -1,0 +1,149 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hi, I’m Ruth.",
+    "section": "",
+    "text": "Welcome to my digital workspace!\nI’m a data analyst passionate about turning messy data into insightful stories. My work blends statistics, machine learning, and visual storytelling to address real-world problems.\nI come from a strong background in mathematics and education, with over a decade spent making complex concepts make sense. These days, I channel that clarity into crafting analytical solutions and writing articles that simplify mathematical topics."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "articles.html",
+    "href": "articles.html",
+    "title": "Articles",
+    "section": "",
+    "text": "Welcome to this growing library of projects.\nUse the search box below to find articles by title, date, or tags."
+  },
+  {
+    "objectID": "index.html#hi-im-ruth",
+    "href": "index.html#hi-im-ruth",
+    "title": "About me",
+    "section": "👩🏾‍💻 Hi, I’m Ruth ",
+    "text": "👩🏾‍💻 Hi, I’m Ruth \nWelcome to my digital workspace.\nI’m a data analyst with a love for turning messy data into clear stories. My work blends machine learning, statistics, and visual storytelling—all aimed at solving real-world problems and delivering actionable insights.\nI come from a strong background in mathematics and teaching, with over a decade spent making complex concepts make sense. These days, I channel that clarity into crafting analytical solutions and writing tutorials that simplify topics like logistic regression, principal component analysis, and more."
+  },
+  {
+    "objectID": "index.html#what-youll-find-here",
+    "href": "index.html#what-youll-find-here",
+    "title": "Hi, I’m Ruth.",
+    "section": "What You’ll Find Here",
+    "text": "What You’ll Find Here\nThis site is a curated collection of my projects, experiments, and thoughts on data analytics, along with a discussion of some elementary math ideas from my teaching days. Here are some of the things I share:\n\nData analysis tutorials\n\nMachine learning projects\n\nData visualizations\n\nHead over to the Blog page to dive in."
+  },
+  {
+    "objectID": "index.html#tools-of-my-trade",
+    "href": "index.html#tools-of-my-trade",
+    "title": "Hi, I’m Ruth",
+    "section": "🛠️ Tools of My Trade ",
+    "text": "🛠️ Tools of My Trade \nI’m fluent in Python, R, and SQL. My go-to libraries include scikit-learn, Pandas, Matplotlib, and Plotly.\nI love building from scratch, but I’m not shy about automating things."
+  },
+  {
+    "objectID": "index.html#lets-connect",
+    "href": "index.html#lets-connect",
+    "title": "Hi, I’m Ruth.",
+    "section": "Let’s Connect",
+    "text": "Let’s Connect\nIf you’re looking to collaborate or share ideas, you can find me here:\n\n💼 LinkedIn\n💻 GitHub"
+  },
+  {
+    "objectID": "articles.html#articles-tutorials",
+    "href": "articles.html#articles-tutorials",
+    "title": "Articles",
+    "section": "",
+    "text": "Welcome to this growing library of projects.\nUse the search box below to find articles by title, date, or tags."
+  },
+  {
+    "objectID": "posts/clustered-barplots-r.html",
+    "href": "posts/clustered-barplots-r.html",
+    "title": "Creating clustered bar graphs with R base graphics",
+    "section": "",
+    "text": "A clustered bar graph is useful for comparing values across two categories of data. In this type of graph, we organize the bars in groups based on the levels of the first categorical variable. The height of each bar within a group represents the value of a level of the second categorical variable.\nYou can create this graph in R using the pre-installed base graphics package. This package has many plotting functions that are easy to use and excel at generating basic plots quickly. Use the command library(help = “graphics”) to get more information on this package, including a complete list of its functions."
+  },
+  {
+    "objectID": "posts/clustered-barplots-r.html#pre-requisities",
+    "href": "posts/clustered-barplots-r.html#pre-requisities",
+    "title": "Creating clustered bar graphs with R base graphics",
+    "section": "Pre-requisities",
+    "text": "Pre-requisities\nTo follow through with the activities in this article, you should have a working knowledge of R."
+  },
+  {
+    "objectID": "posts/clustered-barplots-r.html#the-data",
+    "href": "posts/clustered-barplots-r.html#the-data",
+    "title": "Creating clustered bar graphs with R base graphics",
+    "section": "The Data",
+    "text": "The Data\n\n\nStore\nProduct\nSales ($)\n\n\n\nA\nP1\n42,500\n\n\nB\nP1\n48,502\n\n\nC\nP1\n39,500\n\n\nA\nP2\n43,600\n\n\nB\nP2\n32,303\n\n\nC\nP2\n29,500\n\n\nA\nP3\n49,270\n\n\nB\nP3\n49,664\n\n\nC\nP3\n48,507\n\n\n\nTable 1: Dummy sales data. \nTo create the graphs in this article, we use the dataset displayed in Table 1. In this dataset, Store and Product are categorical variables, while Sales is a numerical variable. You can use a clustered bar graph to compare the monthly sales of the three products across the three stores. The bars in this graph will be organized into three groups based on store levels, with each bar representing the sales figure for a specific product."
+  },
+  {
+    "objectID": "posts/clustered-barplots-r.html#how-to-create-the-graph",
+    "href": "posts/clustered-barplots-r.html#how-to-create-the-graph",
+    "title": "Creating clustered bar graphs with R base graphics",
+    "section": "How to create the graph",
+    "text": "How to create the graph\nStep 1: Reorganize the dataset\nWe use the barplot() function in the base graphics package to plot the clustered bar graph. However, we must reorganize the dataset into a wide format to use this function effectively. In this format, each unique product occupies a single row, and each cell corresponds to a sales figure. Currently, the dataset has a long format, with store and product values spread across multiple rows.\nThe barplot() function requires the dataset to be in vector or matrix form. In this exercise, we input the data as a matrix using the matrix() function.\nHere is the code:\n\nmydata &lt;- matrix(c(42500, 48502, 39500, 43600, 32303, 29500, 49270, 49664, 48507), nrow = 3, byrow = TRUE)\nrownames(mydata) &lt;- c(\"P1\", \"P2\", \"P3\")\ncolnames(mydata) &lt;- c(\"A\", \"B\", \"C\")\nmydata\n\n       A     B     C\nP1 42500 48502 39500\nP2 43600 32303 29500\nP3 49270 49664 48507\n\n\nThe matrix() function has two crucial arguments, nrow and byrow. nrow specifies the number of rows in the matrix, while byrow, set to TRUE, indicates that the matrix is populated row by row.\nStep 2: Create the graph\nThe code provided below uses the barplot() function to create the graph shown in Figure 1.\n\nbarplot(mydata, beside = TRUE, xlab = \"Store\", ylab = \"Sales ($)\", legend.text = TRUE)\n\n\n\n\n\n\nFigure 1: Clustered bar graph created using barplot().\n\n\n\n\nAs demonstrated in the code, barplot() accepts several arguments. Use the command ?barplot to obtain a complete list of the function’s arguments.\nThe argument beside must be set to TRUE to ensure the bars within groups appear side-by-side, creating the desired clustered bar graph. If set to FALSE, the bars will appear stacked on each other. Additionally, we use the xlab and ylab arguments to specify the labels for the graph’s x-axis and y-axis, respectively.\nBy setting the argument legendtext to TRUE, we create a legend for the graph. A legend is a crucial element of a clustered bar graph because it helps users associate bar colors with distinct data points.\nStep 3: Customize the graph\nThe graph in Figure 1 is a basic clustered bar graph with few elements. We can enhance the graph’s clarity by adding colors, customizing the legend, adjusting the margins, and rescaling the y-axis.\n1. Add colors\nWe use the Pastel1 palette from the RColorBrewer package to color the bars of the graph based on product levels.\nIf you don’t already have this package installed, do so with the command install.packages(\"RColorBrewer\").\nAfter installation, use the command library(RColorBrewer) to load the package.\nOnce loaded, you can access the brewer.pal() function and use it to create a vector of colors for your graph. This function takes two arguments: the number of colors and the name of the color palette. For a complete list of the palettes in Rcolorbrewer, use the command display.brewer.all().\nWe use the following code to add colors and create the graph shown in Figure 2.\n\nlibrary(RColorBrewer)\nbarplot(mydata, beside = TRUE, col = brewer.pal(3, name = \"Pastel1\"), xlab = \"Store\", ylab = \"Sales ($)\", legend.text = TRUE)\n\n\n\n\n\n\nFigure 2: Clustered bar graph with added product colors.\n\n\n\n\n2. Customize the legend\nWe can enhance the legend of the graph in Figure 2 by\n\nRepositioning it to avoid blocking the bars.\nRemoving the box around it.\nAdding a title.\n\nFor these adjustments, we pass the following arguments to args.legend() as a list:\n\ntitle = “Product”: sets the title of the legend.\nx = “right”: positions the legend to the right of the graph.\nbty = “n”: suppresses the box around the legend, reducing clutter.\ninset = c(-0.16): shifts the legend 0.16 units to the right.\n\nThe adjustments result in the graph shown in Figure 3.\n\nbarplot(mydata, beside = TRUE, col = brewer.pal(3, name = \"Pastel1\"), xlab = \"Store\", ylab = \"Sales ($)\", legend.text = TRUE, args.legend = list(title = \"Product\", x = \"right\", bty = \"n\", inset = -0.16))\n\n\n\n\n\n\nFigure 3: Clustered bar graph with customized legend.\n\n\n\n\n3. Adjust the margins\nFigure 3 shows that the right margin lacks sufficient space for the legend. To resolve this problem, we increase the size of the right margin using the par() function with the mai argument, specifying the margin in inches. Use the command par(\"mai\") to check the plot’s default margin settings.\nAdditionally, we can use the space argument to reduce the space between the groups of bars, thus creating more room in the right margin. This argument accepts two values. The first value indicates the space between bars within a group, while the second value denotes the space between groups of bars. These changes result in the graph in Figure 4.\n\npar(mai=c(1, 1, 1, 1.2))\nbarplot(mydata, beside = TRUE, col = brewer.pal(3, name = \"Pastel1\"), space = c(0, 0.6), xlab = \"Store\", ylab = \"Sales ($)\", legend.text = TRUE, args.legend = list(title = \"Product\", x = \"right\", bty = \"n\", inset = -0.16))\n\n\n\n\n\n\nFigure 4: Clustered bar graph with adjusted margins.\n\n\n\n\n4. Rescale the y-axis\nWe use the ylim argument to specify the range of the y-axis. This argument accepts a vector containing the smallest and largest values on the y-axis. Here is the code used to create the graph shown in Figure 5.\n\npar(mai=c(1, 1, 1, 1.2))\nbarplot(mydata, beside = TRUE, col = brewer.pal(3, name = \"Pastel1\"), space = c(0, 0.6), xlab = \"Store\", ylab = \"Sales ($)\", ylim = c(0, 60000), legend.text = TRUE, args.legend = list(title = \"Product\", x = \"right\", bty = \"n\", inset = -0.16))\n\n\n\n\n\n\nFigure 5: Clustered bar graph with various modifications."
+  },
+  {
+    "objectID": "posts/clustered-barplots-r.html#conclusion",
+    "href": "posts/clustered-barplots-r.html#conclusion",
+    "title": "Creating clustered bar graphs with R base graphics",
+    "section": "Conclusion",
+    "text": "Conclusion\nThis article has shown that you can create a visually appealing and effective clustered bar graph using the barplot() function from R’s base graphics package. The function has several arguments that allow you to customize the graph’s appearance to meet your needs. While graphing, remember that simplicity and clarity are crucial to effectively communicating your data to viewers."
+  },
+  {
+    "objectID": "posts/clustered-barplots-python.html",
+    "href": "posts/clustered-barplots-python.html",
+    "title": "Creating clustered bar graphs with Python",
+    "section": "",
+    "text": "A clustered bar graph, also known as a grouped bar chart, is used to plot numerical values for the levels of two categorical variables in a dataset. In these graphs, the bars are grouped based on the levels of one categorical variable. The colors of the bars within each group represent the levels of the second categorical variable. In this article, we use a dummy dataset to create clustered bar graphs with Python."
+  },
+  {
+    "objectID": "posts/clustered-barplots-python.html#pre-requisites",
+    "href": "posts/clustered-barplots-python.html#pre-requisites",
+    "title": "Creating clustered bar graphs with Python",
+    "section": "Pre-requisites",
+    "text": "Pre-requisites\nTo follow through with the exercises in this article, you should\n\nHave a working knowledge of Python.\nHave the following Python libraries installed in your machine: pandas, matplotlib, plotly, and seaborn."
+  },
+  {
+    "objectID": "posts/clustered-barplots-python.html#import-libraries",
+    "href": "posts/clustered-barplots-python.html#import-libraries",
+    "title": "Creating clustered bar graphs with Python",
+    "section": "Import Libraries",
+    "text": "Import Libraries\nImport all libraries necessary to complete this exercise using the following code:\n\n# Import libraries\nimport pandas as pd\nimport numpy as np\nimport plotly.express as px\nimport plotly.graph_objects as go\nimport matplotlib.pyplot as plt\nimport seaborn as sns"
+  },
+  {
+    "objectID": "posts/clustered-barplots-python.html#the-data",
+    "href": "posts/clustered-barplots-python.html#the-data",
+    "title": "Creating clustered bar graphs with Python",
+    "section": "The Data",
+    "text": "The Data\n\n\n\nStore\nProduct\nSales ($)\n\n\n\n\nA\nP1\n42,500\n\n\nB\nP1\n48,502\n\n\nC\nP1\n39,500\n\n\nA\nP2\n43,600\n\n\nB\nP2\n32,303\n\n\nC\nP2\n29,500\n\n\nA\nP3\n49,270\n\n\nB\nP3\n49,664\n\n\nC\nP3\n48,507\n\n\n\n\nTable 1: Dummy sales data. \nTable 1 shows a dummy dataset having 3 columns and 9 rows. The dataset is said to have a long format because its first column (Store) has values repeating in multiple rows. We would like to see how the sales values for products P1, P2, and P3 change across stores A, B, and C, and a clustered bar graph is ideal for visualizing these changes. We use pandas to recreate the dataset in Python. Here is the code:\n\n# Create dataset\ndf = pd.DataFrame({\"Store\": [\"A\", \"B\", \"C\", \"A\", \"B\", \"C\", \"A\", \"B\", \"C\"], \"Product\": [\"P1\", \"P1\", \"P1\", \"P2\", \"P2\", \"P2\", \"P3\", \"P3\", \"P3\"], \"Sales\": [42500, 48502, 39500, 43600, 32303, 29500, 49270, 49664, 48507]})\nprint(df)\n\n  Store Product  Sales\n0     A      P1  42500\n1     B      P1  48502\n2     C      P1  39500\n3     A      P2  43600\n4     B      P2  32303\n5     C      P2  29500\n6     A      P3  49270\n7     B      P3  49664\n8     C      P3  48507"
+  },
+  {
+    "objectID": "posts/clustered-barplots-python.html#creating-the-graph",
+    "href": "posts/clustered-barplots-python.html#creating-the-graph",
+    "title": "Creating clustered bar graphs with Python",
+    "section": "Creating the graph",
+    "text": "Creating the graph\n\nMethod 1: Using Plotly\nYou can use either the plotly.express or the plotly.graph_objects module to plot graphs in Plotly. The plotly.graph_objects module is best for building complex graphs requiring significant customization.\nTo build the clustered bar graph in plotly.express, use the following code:\n\n# plotly.express clustered barchart\nfig = px.bar(df, x=\"Store\", y=\"Sales\",\n             color=\"Product\", barmode=\"group\", title=\"Product sales in $\",\n             color_discrete_sequence=px.colors.qualitative.Set2,\n             width=500, height=400,\n             text_auto=True, template=\"plotly_white\")\nfig.update_yaxes(visible=False)\nfig.show()\n\n\n\n                                                \n\n\nFigure 1: Clustered bar graph created using plotly.express.\n\n\n\n\nYou can learn more about the parameters of px.bar() by using the command help(px.bar).\nIn the code above, we use the update_yaxes() figure method to suppress the graph’s y-axis and horizontal grid lines, removing graph clutter. The result is displayed in Figure 1.\nNext, we create another clustered bar graph using plotly.graph_objects. However, to use this module, you must reorganize the dataset into a wide format, ensuring that each row in the new dataset represents a unique store.\nAs the data is small, you can recreate it from scratch using the following code:\n\ndf_wide = pd.DataFrame({\"Store\": [\"A\", \"B\", \"C\"], \"P1\": [42500, 48502, 39500], \n              \"P2\": [43600, 32303, 29500], \"P3\": [49270, 49664, 48507]})\nprint(df_wide)\n\n  Store     P1     P2     P3\n0     A  42500  43600  49270\n1     B  48502  32303  49664\n2     C  39500  29500  48507\n\n\nIf the data were large, it’d be easier to reorganize it using the pivot() method in pandas. This method has the following three crucial parameters:\n\ncolumns: columns of the new DataFrame.\nindex: column used to create the new DataFrame’s index.\nvalues: columns used to populate the new DataFrame.\n\nUse the command help(df.pivot) to learn more about pivot().\nFor this case, you can use pivot() to reorganize the data as follows:\n\ndf_wideP = df.pivot(columns=[\"Product\"], index=\"Store\", values=\"Sales\")\nprint(df_wideP)\n\nProduct     P1     P2     P3\nStore                       \nA        42500  43600  49270\nB        48502  32303  49664\nC        39500  29500  48507\n\n\nHaving reorganized the data, we can now use plotly.graph_objects to visualize it. The result is the graph in Figure 2.\n\ndata=[go.Bar(name=\"P1\", x=df_wide[\"Store\"], y=df_wide[\"P1\"], text=df_wide[\"P1\"], marker_color=\"rgb(102, 194, 165)\"),\n    go.Bar(name=\"P2\", x=df_wide[\"Store\"], y=df_wide[\"P2\"], text=df_wide[\"P2\"], marker_color=\"rgb(252, 141, 98)\"),\n    go.Bar(name=\"P3\", x=df_wide[\"Store\"], y=df_wide[\"P3\"], text=df_wide[\"P3\"], marker_color=\"rgb(141, 160, 203)\")]\nlayout = go.Layout(\n    title={\"text\": \"Product sales in $\"},\n    xaxis={\"title\": \"Store\"},\n    legend={\"title\": \"Product\"},\n    width=500, height=400, template=\"plotly_white\",\n    barmode=\"group\"\n)\nfig_go = go.Figure(data=data, layout=layout)\nfig_go.update_yaxes(visible=False)\nfig_go.show()\n\n\n\n                                                \n\n\nFigure 2: Clustered bar graph created using plotly.graph_objects.\n\n\n\n\n\n\nMethod 2: Using Matplotlib\nAs we already have a wide pandas DataFrame, i.e., df_wide, we can call pandas’ plot() method on this DataFrame to plot the required graph. This method leverages Matplotlib’s plotting capabilities, resulting in the graph in Figure 3. Here’s the code:\n\n# Clustered bar graph using pandas' plot() method\ncolors = [\"#816e94\", \"#22a4bf\", \"#8cc781\"]\ndf_wide.plot(x=\"Store\", \n        kind=\"bar\", width=0.9,\n        stacked=False, figsize=(5, 4), title=\"Product sales in $\",\n        xlabel=\"Store\", ylabel=\"Sales\", color=colors)\nplt.legend(loc=\"lower right\", title=\"Product\");\n\n\n\n\n\n\n\nFigure 3: Clustered bar graph created using pandas’ plot() method.\n\n\n\n\n\nAlternatively, you can use matplotlib’s bar() method, as shown below.\n\n# Clustered bar graph using matplotlib's bar() method\nbarWidth = 0.25\ncolors = [\"#816e94\", \"#22a4bf\", \"#8cc781\"]\n\n# Sales values for products p1, p2, and p3\np1 = df_wide[\"P1\"] \np2 = df_wide[\"P2\"]\np3 = df_wide[\"P3\"]\n\n# Positions of bar groups along the x-axis\npos1 = np.arange(len(p1))  \npos2 = pos1 + barWidth\npos3 = pos2 + barWidth  \n\n# Plot graph\nfig, ax = plt.subplots(figsize=(5, 4))\nax.bar(pos1, p1, color=colors[0], width=barWidth, label=\"P1\")\nax.bar(pos2, p2, color=colors[1], width=barWidth, label=\"P2\")\nax.bar(pos3, p3, color=colors[2], width=barWidth, label=\"P3\")\nax.set_xlabel(\"Store\")\nax.set_xticks(pos1 + barWidth)  # Set x-ticks to be in the middle of the bar groups\nax.set_xticklabels([\"A\", \"B\", \"C\"])  # store group labels\nax.legend(loc=\"lower right\", title=\"Product\")\nplt.title(\"Product sales in $\")\nplt.ylabel(\"Sales\")\nplt.show()\n\n\n\n\n\n\n\nFigure 4: Clustered bar graph created using matplotlib’s bar() method.\n\n\n\n\n\nAs you can see, this method builds every bar from the ground up. To use it effectively, you must specify the positions of the bar groups and ticks along the x-axis and the width of the bars. In this case, the first, second, and third groups start at 0, 1, and 2, respectively. Each group contains three bars (for P1, P2, and P3), so the total width of these three bars must be less than 1 unit, with each bar having a maximum width of 0.33 units. If the width of a bar exceeds 0.33 units, the bar groups will touch each other or overlap. We set the bar width at 0.25 units, resulting in the graph shown in Figure 4.\n\n\nMethod 3: Using Seaborn\nThe Seaborn library is built on top of Matplotlib and provides many tools to enhance Matplotlib’s plotting capabilities.\nWe use Seaborn’s barplot() method to plot the clustered bar graph. This method supports both wide- and long-format data. However, it’s easier to use with long-format data where critical variables are not spread over multiple columns. Here’s the code:\n\n# Clustered bar graph using Seaborn's barplot() method\ncustom_palette = [\"#a6cee3\", \"#1f78b4\", \"#b2df8a\"]\nfig, ax = plt.subplots(figsize=(5, 4)) # Set plot dimensions.\nsns.set_style(\"white\")\nsns.barplot(x=\"Store\", y=\"Sales\", hue=\"Product\", data=df, palette=custom_palette).set(title=\"Product sales in $\")\nplt.legend(loc=\"lower right\")\nplt.show()\n\n\n\n\n\n\n\nFigure 5: Clustered bar graph created using Seaborn’s barplot() method.\n\n\n\n\n\nMany methods used in the code above, like plt.show() and plt.subplots(), are familiar, as we’ve already used them when plotting with Matplotlib.\nThe code outputs the graph in Figure 5."
+  },
+  {
+    "objectID": "posts/clustered-barplots-python.html#conclusion",
+    "href": "posts/clustered-barplots-python.html#conclusion",
+    "title": "Creating clustered bar graphs with Python",
+    "section": "Conclusion",
+    "text": "Conclusion\nBeing Python’s first visualization library, Matplotlib has become a favorite of many Python users. Several later libraries, like pandas and Seaborn, are built on top of it because it is highly customizable and flexible. However you may have to write a lot of code with Matplotlib to create appealing graphs. Generally, of all libraries discussed in this article, the plotly.express module is the easiest to use for creating clustered bar graphs and provides the most appealing results."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Welcome to this growing library of ideas.\nUse the search box below to find articles by title, date, or tags.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\nCreating clustered bar graphs with Python\n\n\n\n\n\n\nData Visualization\n\n\nPython\n\n\n\nA tutorial on creating clustered bar graphs using Python.\n\n\n\n\n\nApr 18, 2025\n\n\nbarplots,Python\n\n\n\n\n\n\n\nCreating clustered bar graphs with R base graphics\n\n\n\n\n\n\nData Visualization\n\n\nR\n\n\n\nA tutorial on creating clustered bar graphs using base R.\n\n\n\n\n\nApr 18, 2025\n\n\nbarplots,R\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog.html#blog",
+    "href": "blog.html#blog",
+    "title": "Blog",
+    "section": "",
+    "text": "Welcome to this growing library of articles.\nUse the search box below to find articles by title, date, or tags."
+  }
+]

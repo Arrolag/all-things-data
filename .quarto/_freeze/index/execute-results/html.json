@@ -1,0 +1,17 @@
+{
+  "hash": "e793e2bdec3b24e436b9c5d7e5505da6",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Welcome to my site!\"\nabout:\n  template: jolla\n  links:\n    - icon: envelope\n      href: mailto:rumoab@gmail.com\n    - icon: linkedin\n      href: https://www.linkedin.com/in/akechruthogal\n---\n\n\n\n\n\n\n\nThis is a Quarto website.\n\nTo learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
