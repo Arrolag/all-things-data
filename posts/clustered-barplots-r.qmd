@@ -1,6 +1,6 @@
 ---
 title: "Creating clustered bar graphs with R base graphics"
-date: 2025-04-18
+date: 2025-03-19
 categories: [Data Visualization, R]
 tags: [barplots, R]
 ---
@@ -15,9 +15,10 @@ To follow through with the activities in this article, you should have a working
 
 ## The Data
 
+Consider the sales dataset below.
+
 ```{=html}
 <table>
-  <caption>Table 1: Dummy sales data.</caption>
   <thead>
     <tr>
       <th>Store</th>
@@ -74,7 +75,8 @@ To follow through with the activities in this article, you should have a working
   </tbody>
 </table>
 ```
-To create the graphs in this article, we use the dataset displayed in Table 1. In this dataset, Store and Product are categorical variables, while Sales is a numerical variable. You can use a clustered bar graph to compare the monthly sales of the three products across the three stores. The bars in this graph will be organized into three groups based on store levels, with each bar representing the sales figure for a specific product.
+
+In this dataset, Store and Product are categorical variables, while Sales is a numerical variable. You can use a clustered bar graph to compare the monthly sales of the three products across the three stores. The bars in this graph will be organized into three groups based on store levels, with each bar representing the sales figure for a specific product.
 
 ## How to create the graph
 

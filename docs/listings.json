@@ -3,7 +3,8 @@
     "listing": "/blog.html",
     "items": [
       "/posts/clustered-barplots-python.html",
-      "/posts/clustered-barplots-r.html"
+      "/posts/clustered-barplots-r.html",
+      "/posts/logistic-regression-adult-data.html"
     ]
   }
 ]

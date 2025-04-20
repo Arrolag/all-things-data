@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.40">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="dcterms.date" content="2025-04-18">
+<meta name="dcterms.date" content="2025-03-19">
 <title>Creating clustered bar graphs with R base graphics – ARRO</title>
 <style>
 code{white-space: pre-wrap;}
@@ -156,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 18, 2025</p>
+      <p class="date">March 19, 2025</p>
     </div>
   </div>
   
@@ -170,8 +170,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="pre-requisities" class="level2"><h2 class="anchored" data-anchor-id="pre-requisities"><strong>Pre-requisities</strong></h2>
 <p>To follow through with the activities in this article, you should have a working knowledge of R.</p>
 </section><section id="the-data" class="level2"><h2 class="anchored" data-anchor-id="the-data">The Data</h2>
+<p>Consider the sales dataset below.</p>
 <table class="caption-top table" data-quarto-postprocess="true">
-<caption>Table 1: Dummy sales data.</caption>
 <thead><tr class="header">
 <th data-quarto-table-cell-role="th">Store</th>
 <th data-quarto-table-cell-role="th">Product</th>
@@ -225,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>To create the graphs in this article, we use the dataset displayed in Table 1. In this dataset, Store and Product are categorical variables, while Sales is a numerical variable. You can use a clustered bar graph to compare the monthly sales of the three products across the three stores. The bars in this graph will be organized into three groups based on store levels, with each bar representing the sales figure for a specific product.</p>
+<p>In this dataset, Store and Product are categorical variables, while Sales is a numerical variable. You can use a clustered bar graph to compare the monthly sales of the three products across the three stores. The bars in this graph will be organized into three groups based on store levels, with each bar representing the sales figure for a specific product.</p>
 </section><section id="how-to-create-the-graph" class="level2"><h2 class="anchored" data-anchor-id="how-to-create-the-graph">How to create the graph</h2>
 <section id="step-1-reorganize-the-dataset" class="level3"><h3 class="anchored" data-anchor-id="step-1-reorganize-the-dataset">Step 1: Reorganize the dataset</h3>
 <p>We use the <code><a href="https://rdrr.io/r/graphics/barplot.html">barplot()</a></code> function in the base graphics package to plot the clustered bar graph. However, we must reorganize the dataset into a wide format to use this function effectively. In this format, each unique product occupies a single row, and each cell corresponds to a sales figure. Currently, the dataset has a long format, with store and product values spread across multiple rows.</p>

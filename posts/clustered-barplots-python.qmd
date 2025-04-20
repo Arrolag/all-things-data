@@ -1,6 +1,6 @@
 ---
 title: "Creating clustered bar graphs with Python"
-date: 2025-04-18
+date: 2025-03-19
 categories: [Data Visualization, Python]
 tags: [barplots, Python]
 ---
@@ -32,9 +32,11 @@ import seaborn as sns
 
 ## The Data
 
+Consider the dummy sales dataset below.
+
+
 ```{=html}
 <table>
-  <caption>Table 1: Dummy sales data.</caption>
   <thead>
     <tr>
       <th>Store</th>
@@ -93,7 +95,7 @@ import seaborn as sns
 ```
 
 
-Table 1 shows a dummy dataset having 3 columns and 9 rows. The dataset is said to have a long format because its first column (Store) has values repeating in multiple rows. We would like to see how the sales values for products P1, P2, and P3 change across stores A, B, and C, and a clustered bar graph is ideal for visualizing these changes. We use pandas to recreate the dataset in Python. Here is the code:
+This dataset is said to have a long format because its first column (Store) has values repeating in multiple rows. We would like to see how the sales values for products P1, P2, and P3 change across stores A, B, and C, and a clustered bar graph is ideal for visualizing these changes. We use pandas to recreate the dataset in Python. Here is the code:
 
 ```{python}
 # Create dataset

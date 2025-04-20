@@ -16,5 +16,8 @@
   },
   "blog.qmd": {
     "blog.html": "4d07eb63"
+  },
+  "posts/logistic-regression-adult-data.qmd": {
+    "logistic-regression-adult-data.html": "a905e8d6"
   }
 }
